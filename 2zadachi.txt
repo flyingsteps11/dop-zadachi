@@ -1,0 +1,17 @@
+
+//1. Сделать, чтобы функция выводила 0,1,2,3(вариант с замыканием)
+
+for(let i=0;i<4;i++){
+  setTimeout(()=>console.log(i),0);
+}
+
+//2.Вариант со стрелочной функцией, чтобы выводилось 'doggo'
+let dog={
+  name:'doggo',
+  sayName(){
+    console.log(this.name);
+  }
+} 
+let sayName=dog.sayName.bind(dog);
+sayName();
+
